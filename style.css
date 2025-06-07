@@ -1,0 +1,77 @@
+/* Reset default page margins and padding, set consistent font */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the main heading and add spacing */
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+/* Make the map fill most of the viewport height */
+#map {
+  height: 90vh;
+  width: 100%;
+}
+
+/* Remove default cluster icon backgrounds and borders */
+.marker-cluster,
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background: none !important;
+  background-image: none !important;
+  border: none !important;
+}
+
+/* Style small clusters: semi-transparent purple circles */
+.marker-cluster-small div {
+  background-color: rgba(155, 89, 182, 0.6);
+  width: 30px;
+  height: 30px;
+  font-size: 12px; /* smaller text for fewer points */
+}
+
+/* Style medium clusters: slightly larger circles */
+.marker-cluster-medium div {
+  background-color: rgba(155, 89, 182, 0.6);
+  width: 40px;
+  height: 40px;
+  font-size: 14px; /* medium text size */
+}
+
+/* Style large clusters: biggest circles for many points */
+.marker-cluster-large div {
+  background-color: rgba(155, 89, 182, 0.6);
+  width: 50px;
+  height: 50px;
+  font-size: 16px; /* larger text for high counts */
+}
+
+/* Common cluster div styling: center content and add drop shadow */
+.marker-cluster div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%; /* make circle */
+  font-weight: bold;
+  color: #fff; /* white text */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style individual markers: white circle with colored border and icon */
+.custom-marker .marker-icon {
+  background: #fff;          /* white fill */
+  border-radius: 50%;        /* circular shape */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;         /* border color set inline per category */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}

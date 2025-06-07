@@ -2,15 +2,10 @@
 const map = L.map("map").setView([47.8095, 13.0550], 13);
 
 // 2) Add base map layer
-L.tileLayer(
-  "https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.png",
-  {
-    attribution:
-      'Map tiles by <a href="https://stamen.com">Stamen Design</a>, CC BY 3.0 — ' +
-      'Data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-    maxZoom: 20,
-  }
-).addTo(map);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+  maxZoom: 19,
+}).addTo(map);
 
 // 3) Define categories with labels, colors, and icon names
 const categories = {

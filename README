@@ -1,0 +1,33 @@
+Museums & Exhibitions in Salzburg – Web Map
+Run the project with: "python3 -m http.server"
+
+This web application displays cultural locations in Salzburg, including museums, galleries, memorials, and cultural centers. It is designed for tourists and built using Leaflet and OpenStreetMap data.
+
+Features
+	•	Interactive map centered on Salzburg
+	•	Category-specific markers with consistent coloring
+	•	Clustered markers based on zoom level and location density
+	•	Popups showing name, description, address, hours, website, and accessibility
+	•	Toggleable layers for different categories
+
+Technologies Used
+	•	Leaflet (interactive map)
+	•	Leaflet.markercluster (marker clustering)
+	•	OpenStreetMap and Overpass Turbo (data source)
+	•	HTML, CSS, and JavaScript
+
+How It Works
+	•	index.html loads Leaflet and clustering libraries, adds the map container, and links to styles and scripts
+	•	script.js initializes the map, loads GeoJSON data, processes categories, creates markers and clusters, and adds popups
+	•	style.css provides a black-and-white theme with colored markers and styled clusters
+
+Data
+
+The application loads cultural data from a local GeoJSON file:
+data/cultural_locations.geojson
+
+Required properties include:
+	•	name, description, opening_hours, website
+	•	addr:street, addr:city, etc.
+	•	wheelchair
+	•	Category tags like tourism, amenity, or historic

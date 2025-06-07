@@ -2,8 +2,10 @@
 const map = L.map("map").setView([47.8095, 13.0550], 13);
 
 // 2) Add base map layer
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  attribution:
+    '&copy; <a href="https://carto.com/">CARTO</a> | Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>',
+  subdomains: "abcd",
   maxZoom: 19,
 }).addTo(map);
 

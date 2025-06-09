@@ -9,6 +9,13 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
   maxZoom: 19,
 }).addTo(map);
 
+// Add scale bar
+L.control.scale({
+  imperial: false,
+  metric: true,
+  position: 'bottomleft'
+}).addTo(map);
+
 // 3) Define categories with labels, colors, and icon names
 const categories = {
   museum: "Museums",
